@@ -1,0 +1,12 @@
+- name: Typing the file
+  hosts: localhost
+  CONNECTION:
+  VARS:
+     COURSE: "Devops with Everything"
+     DURATION: "4 months"
+     TRAINER: "MYSELF"
+  tasks:
+  - name: print variables
+    anisble.builtin.debug:
+      msg: "Course is: {{ COURSE }}, and Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}   
+    
