@@ -1,7 +1,9 @@
 - name: Typing the file
   hosts: localhost
   connection: local
-  
+
+  vars_file:
+   -COURSE.YML
   tasks:
   - name: print variables
     ansible.builtin.debug:
