@@ -1,0 +1,9 @@
+- name: install and run nginx
+  hosts: web
+  become: yes
+  tasks:
+  - name: stop nginx
+    ansible.builtin.service:
+      name: nginx
+      state: stopped
+      enabled: no
