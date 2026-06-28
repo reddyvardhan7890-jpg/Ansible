@@ -7,3 +7,7 @@
       name: nginx
       state: stopped
       enabled: no
+  - name: uninstall nginx package
+    ansible.builtin.dnf:
+      name: nginx
+      state: absent
