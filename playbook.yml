@@ -12,3 +12,9 @@
       name: nginx
       state: started
       enabled: yes
+  - name: check nginx status
+    ansible.builtin.command: systemctl status nginx
+    register: nginx_status
+  - name: print nginx status
+    ansible.builtin.debug:
+      msg: "{{ nginx_status }}"
