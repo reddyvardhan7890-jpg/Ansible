@@ -11,9 +11,11 @@
     ansible.builtin.dnf:
       name: nginx
       state: absent
-  - name: check nginx status
-    ansible.builtin.command: systemctl status nginx
+  - name: verify nginx is removed
+    ansible.builtin.command: rpm -q nginx
     register: nginx_status
-  - name: print status output
+    ignore_errors: true
+
+  - name: print result
     ansible.builtin.debug:
-      msg: "{{ nginx_status }}"
+      var: nginx_status.stderr_lines
