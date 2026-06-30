@@ -18,4 +18,4 @@
 
   - name: print nginx status
     ansible.builtin.debug:
-      msg: '{{nginx_status.stdout_lines}}"
+      msg: "{{ nginx_status.stdout_lines }}"
