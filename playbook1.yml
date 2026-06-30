@@ -16,6 +16,6 @@
     register: nginx_status
     ignore_errors: true
 
-  - name: print nginx status
+  - name: print status output
     ansible.builtin.debug:
-      msg: "{{ nginx_status.stdout_lines }}"
+      var: nginx_status.stderr_lines"
