@@ -14,8 +14,8 @@
   - name: check nginx status
     ansible.builtin.command: systemctl status nginx
     register: nginx_status
-    ignore_errors: true
+   
 
   - name: print status output
     ansible.builtin.debug:
-      var: nginx_status.stderr_lines"
+      msg: "{{ nginx_status}}"
