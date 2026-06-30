@@ -1,14 +1,13 @@
-- name: remove the packages
+- name: install packages
   hosts: local
   connection: local
   become: yes
   tasks:
-  - name: remove the packages
-    ansible.builtin.packages:
-       name: "{{ item.name }}"
-       state: "{{ item.state }}"
-    loop:
-     - { name: "mysql" , state: "absent"}
-     - { name: "nginx" , state: "absent"}
-     - { name: "msmtp" , state: "absent"}
- 
+  - name: install package
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop: # list of map
+    - { name: "mysql", state: "absent"} # map/dict
+    - { name: "nginx", state: "present"}
+    - { name: "zip", state: "absent"}
