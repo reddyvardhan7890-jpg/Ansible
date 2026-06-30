@@ -10,7 +10,7 @@
     loop:
      - mysql
      - nginx 
-      - msmtp
+     - msmtp
   - name: print success message
     ansible.builtin.debug:
        msg: "Installed packages completed"
