@@ -10,4 +10,4 @@
     loop: # list of map
     - { name: "mysql", state: "absent"} # map/dict
     - { name: "nginx", state: "present"}
-    - { name: "zip", state: "absent"}
+    - { name: "zip", state: "present"}
