@@ -4,7 +4,7 @@
   tasks: 
   - name: instal packages
     ansible.builtin.debug:
-      msg : "Hello {{ items }}" #item is reserved keyword
+      msg : "Hello {{ item }}" #item is reserved keyword
     loop:
      - Ramesh
      - Harsha
