@@ -1,6 +1,6 @@
 - name: check a number less thab 10 or not
   hosts: localhost
-  connection: localhost
+  connection: local
   vars:
     NUMBER_OF_SESSIONS: 7
   tasks:
