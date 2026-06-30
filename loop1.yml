@@ -1,0 +1,13 @@
+- name: loop pratice
+  hosts: local 
+  connection: local
+  tasks: 
+  - name: instal packages
+    ansible.builtin.debug:
+      msg : "Hello {{ items }}" #item is reserved keyword
+    loop:
+     - Ramesh
+     - Harsha
+     - Harsha
+
+
