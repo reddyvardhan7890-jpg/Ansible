@@ -3,11 +3,14 @@
   connection: local
   become: yes
   tasks:
-  -name: instal three packages in loop
+  - name: instal three packages in loop
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
   loop:
   - mysql
   - nginx 
-  - msmtp s-nail
+  - msmtp
+  - name: print success message
+    ansible.builtin.debug:
+     msg: "Installed packages completed"
