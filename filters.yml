@@ -3,8 +3,8 @@
   connection: local
   vars:
     topics: linux, shell, ansible
-    myIp1: "245.23.89.123"
-    myIp: "192.23.89.123"
+    myIp1: "300.23.89.123"
+    myIp2: "192.23.89.123"
     tagsmap: 
       name: ansible
       project: roboshop
@@ -54,9 +54,9 @@
   - name: convert YAML to JSON
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json  }}"
-  - name: check ipv4
+  - name: check first ipv4
     ansible.builtin.debug:
       msg: "{{ myIp1 | ansible.utils.ipv4 }}"
-  - name: check ipv4
+  - name: check second ipv4
     ansible.builtin.debug:
-      msg: "{{ myIp | ansible.utils.ipv4 }}"
+      msg: "{{ myIp2 | ansible.utils.ipv4 }}"
