@@ -34,3 +34,6 @@
   - name: convert list to map
     ansible.builtin.debug:
       msg: "{{ tagslist | items2dict }}"
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ COURSE | upper }}"
