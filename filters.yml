@@ -34,6 +34,15 @@
   - name: convert list to map
     ansible.builtin.debug:
       msg: "{{ tagslist | items2dict }}"
-  - name: convert to upper case
+  - name: convert to lower case any file content from inventory
+    ansible.builtin.debug:
+      msg: "{{ COURSE | lower }}"
+  - name: convert to upper case any file content from inventory
+    ansible.builtin.debug:
+      msg: "{{ COURSE | upper }}"
+  - name: convert to lower case any file content
+    ansible.builtin.debug:
+      msg: "{{ lookup('file', 'COURSE.YML') | lower }}"
+  - name: convert to upper case any file content
     ansible.builtin.debug:
       msg: "{{ lookup('file', 'COURSE.YML') | upper }}"
