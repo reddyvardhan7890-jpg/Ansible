@@ -3,10 +3,10 @@
   connection: local
   vars:
     topics: linux, shell, ansible
-    tags:
-     name: ansible
-     project: roboshop
-     component: with aws
+    tags: 
+      name: ansible
+      project: roboshop
+      component: with aws
   tasks:
   - name: greeting
     ansible.builtin.debug:
