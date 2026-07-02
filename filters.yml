@@ -5,6 +5,7 @@
     topics: linux, shell, ansible
     myIp1: "300.23.89.123"
     myIp2: "192.23.89.123"
+    myIp3: "300.23.89.123"
     tagsmap: 
       name: ansible
       project: roboshop
@@ -60,3 +61,6 @@
   - name: check second ipv4
     ansible.builtin.debug:
       msg: "{{ myIp2 | ansible.utils.ipv4 }}"
+  - name: check third ipv6
+    ansible.builtin.debug:
+      msg: "{{ myIp3 | ansible.utils.ipv6 }}"
