@@ -46,3 +46,9 @@
   - name: convert to upper case any file content
     ansible.builtin.debug:
       msg: "{{ lookup('file', 'COURSE.YML') | upper }}"
+  - name: read students yaml
+    ansible.builtin.set_fact: # setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
+  - name: convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json  }}"
