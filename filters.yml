@@ -5,7 +5,7 @@
     topics: linux, shell, ansible
     myIp1: "300.23.89.123"
     myIp2: "192.23.89.123"
-    myIp3: "300.23.89.123"
+    myIp3: "2001:db8:85a3::8a2e:370:7334"
     tagsmap: 
       name: ansible
       project: roboshop
