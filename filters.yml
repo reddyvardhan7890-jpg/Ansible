@@ -36,4 +36,4 @@
       msg: "{{ tagslist | items2dict }}"
   - name: convert to upper case
     ansible.builtin.debug:
-      msg: "{{ lookup('file', 'COURSE.yml') | upper }}"
+      msg: "{{ lookup('file', 'COURSE.YML') | upper }}"
