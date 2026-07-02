@@ -3,6 +3,10 @@
   connection: local
   vars:
     topics: linux, shell, ansible
+    tags:
+    name: ansible
+    project: roboshop
+    component: with aws
   tasks:
   - name: greeting
     ansible.builtin.debug:
@@ -10,3 +14,6 @@
   - name: convert string to list
     ansible.builtin.debug:
       msg: "{{ topics | split(',') }}"
+  - name: map to list
+    ansible.builtin.debug:
+      msg: "{{ topics | dict2items }}"
